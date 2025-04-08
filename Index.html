@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copywriting Services - Pay Only For Results</title>
+    <style>
+        :root {
+            --primary: #FF6B35;
+            --secondary: #2E5EAA;
+            --dark: #333;
+            --light: #f9f9f9;
+            --accent: #FFD166;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--dark);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--secondary), #1a365d);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #ff8c5a;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 15px auto;
+        }
+        
+        .pain-points {
+            background-color: white;
+        }
+        
+        .pain-box {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .vs-ai {
+            background-color: #f0f5ff;
+        }
+        
+        .vs-ai-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .vs-ai-box {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonials {
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card h4 {
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        
+        .video-testimonial {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            height: 200px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .video-testimonial i {
+            font-size: 50px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        
+        .video-testimonial:hover i {
+            opacity: 1;
+        }
+        
+        .about-me {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .about-me-content {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .about-me-image {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+        
+        .about-me-image img {
+            border-radius: 10px;
+            max-width: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .portfolio {
+            background-color: white;
+            text-align: center;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-card i {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .guarantees {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .guarantee-card {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .guarantee-card i {
+            font-size: 30px;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), #ff8c5a);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Professional Copywriting Services</h1>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Struggling to get high-converting copy that actually makes sales?</h1>
+            <p>I'll write your sales page, emails, and ads for free – you only pay when you see results!</p>
+            <p><strong>No upfront fees, no risk – just high-quality copy that turns visitors into buyers</strong></p>
+            <a href="#contact" class="cta-button">Get Started Today</a>
+        </div>
+    </section>
+    
+    <section class="pain-points">
+        <div class="container">
+            <h2>Why Working With Me Will Never Actually Waste Your Time!</h2>
+            <div class="pain-box">
+                <p>Just like I said, I've been writing copy for about 1 year due to that reason I exactly know how a typical human brain works.</p>
+                <p>So, every single copy that I write will touch the reader's heart because...</p>
+                <p><strong>I'll highlight their PAIN POINTS</strong></p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="vs-ai">
+        <div class="container">
+            <h2>Why AI Could Never Replace Me Instead, It Acts As A Great Friend To Me</h2>
+            <div class="vs-ai-content">
+                <div class="vs-ai-box">
+                    <h3>Did you ever think that...</h3>
+                    <p>"I don't need a copywriter to write my copy, I'd just use any AI CHATBOTS to write it"</p>
+                    <p>First of all, have you ever tried to write copy with AI?</p>
+                    <p>If so, I'm 100% sure that it wouldn't have fulfilled you, right?</p>
+                </div>
+                <div class="vs-ai-box">
+                    <h3>Let me be honest...</h3>
+                    <p>Raw copy that AI writes is absolute trash.</p>
+                    <p>They would just randomly add generic words such as ACHIEVE, UNLOCK, DISCOVER, ETC.</p>
+                    <p>Readers can smell that from miles afar, this was written by AI. And they end up never buying your product.</p>
+                </div>
+            </div>
+            <div class="pain-box" style="margin-top: 30px;">
+                <p>So that's why I'm saying to you: The humanistic and creative way of writing by humans could never be replaced by an AI. SURELY, not for the next 10 years.</p>
+                <p>Now you might ask...</p>
+                <p><strong>You're right! But why on earth should I trust you?</strong></p>
+                <p>Don't trust me, just trust what I've done for my clients!</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <div class="container">
+            <h2>What My Clients Are Saying</h2>
+            
+            <div class="video-testimonial">
+                <i class="fas fa-play-circle"></i>
+                <p>Video testimonial by Ajay</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <h4>Shuhei</h4>
+                    <p>"The copy was exactly what I needed for my business. Conversions increased by 27% within the first week!"</p>
+                </div>
+                <div class="testimonial-card">
+                    <h4>Watermelon</h4>
+                    <p>"I was skeptical at first, but the results speak for themselves. Best investment I've made for my business."</p>
+                </div>
+                <div class="testimonial-card">
+                    <h4>Tyson Green</h4>
+                    <p>"The email sequence you wrote for me has generated more leads than all our previous campaigns combined."</p>
+                </div>
+                <div class="testimonial-card">
+                    <h4>Frannie</h4>
+                    <p>"Your approach to highlighting pain points really connected with our audience. We're seeing much better engagement."</p>
+                </div>
+                <div class="testimonial-card">
+                    <h4>Mike</h4>
+                    <p>"I appreciate how you took the time to understand my business before writing any copy. It shows in the quality."</p>
+                </div>
+                <div class="testimonial-card">
+                    <h4>Tony</h4>
+                    <p>"Professional, punctual, and incredibly talented. I'll definitely be working with you again."</p>
+                </div>
+                <div class="testimonial-card">
+                    <h4>Joe</h4>
+                    <p>"The sales page you wrote has completely transformed our business. Thank you for your amazing work!"</p>
+                </div>
+                <div class="testimonial-card">
+                    <h4>Nemanja</h4>
+                    <p>"Working with you has been a game-changer for our marketing strategy. Highly recommended!"</p>
+                </div>
+            </div>
+            
+            <div class="pain-box" style="margin-top: 40px; background-color: rgba(255, 255, 255, 0.1);">
+                <p>So, now you know that I'm not just yapping and lying to you and might be slightly credible with me...</p>
+                <p>Let me tell you about my story</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="container">
+            <h2>Who Am I?</h2>
+            <div class="about-me">
+                <div class="about-me-content">
+                    <p>I'm a copywriter from India trying to sign my first client.</p>
+                    <p>I've helped many business owners throughout my journey.</p>
+                    <p>Also, due to the reason that I have experience of 1 year+ as a copywriter; if you gave me a random niche with little information and just told me to write a copy for this niche, I could just sit down and write a killer copy for that niche.</p>
+                    <p>Cause I'm not like other floppy copywriters, if I started writing a copy, I would never just stay there staring at my phone.</p>
+                    <p>In my mind, I've developed an ability to get ideas to write copy, one after another.</p>
+                    <p>Just like I said, I'm not tryna be cocky instead of just being honest with you.</p>
+                    <p>And throughout this journey, I've written over 1000 pieces of copy with my own bare hands.</p>
+                </div>
+                <div class="about-me-image">
+                    <img src="/api/placeholder/400/500" alt="Professional Copywriter">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="portfolio">
+        <div class="container">
+            <h2>My Portfolio</h2>
+            <p>To see the copy that I've written, check out my portfolio of work:</p>
+            <a href="#portfolio" class="cta-button">View My Portfolio</a>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <h2>What Can I Do?</h2>
+            <div class="services">
+                <div class="service-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Sales Pages</h3>
+                    <p>High-converting sales pages that turn visitors into customers.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Sequences</h3>
+                    <p>Engaging emails that nurture leads and drive sales.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-ad"></i>
+                    <h3>Ad Copy</h3>
+                    <p>Attention-grabbing ads that generate clicks and conversions.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 50px;">
+                <h3 style="text-align: center; margin-bottom: 20px;">What Sets Me Apart</h3>
+                <div class="pain-box">
+                    <p><i class="fas fa-check" style="color: green;"></i> Can write copies of different varieties</p>
+                    <p><i class="fas fa-check" style="color: green;"></i> I have reviewed and corrected the mistakes of many other beginner copywriters</p>
+                    <p><i class="fas fa-check" style="color: green;"></i> I'm 100% confident that I can do the work for you</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 50px;">
+                <h3 style="text-align: center; margin-bottom: 20px;">What I Will Never Be!</h3>
+                <div class="guarantees">
+                    <div class="guarantee-card">
+                        <i class="fas fa-times-circle"></i>
+                        <p>A scammer trying to Steal your money</p>
+                    </div>
+                    <div class="guarantee-card">
+                        <i class="fas fa-times-circle"></i>
+                        <p>Would just start sending you some crappy emails after hiring me</p>
+                    </div>
+                    <div class="guarantee-card">
+                        <i class="fas fa-times-circle"></i>
+                        <p>Get despaired of money after just one project</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>It's up to you to trust me or not, after hearing my story and my current situation.</p>
+            <p>If you think I'm lying to you, you can just click off from this page.</p>
+            <p>Or if you actually trust in me and think that I can actually do the work for you, just reach out!</p>
+            <a href="#" class="cta-button">Book a Call Now</a>
+            <p style="margin-top: 20px;">Or connect with me on Instagram:</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Professional Copywriting Services. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
